@@ -594,7 +594,7 @@ function displayFavGrid() {
             <form action="#" method="get" target="_self" id="datePicker">
                 <label for="date">Search for past APODs.  Enter a date between 1996-06-16 and today:</label>
                 <input min="1996-06-16" max="${today}" id="date" type="date" name="date">
-                <button type="submit"><img src="/imgs/telescope.svg"  alt="A telescope icon.">Search</button>
+                <button type="submit"><img src="imgs/telescope.svg"  alt="A telescope icon.">Search</button>
             </form>
             `
             
