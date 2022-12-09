@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My APOD Favourites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="initial-state">
+
+   <header class="header-two" id="pageHeader">
+        <h1>My APOD Favourites</h1>
+        <nav id="nav">
+            <a href="#" id="nav1" class="home active">Home</a>
+            <a href="#" id="nav2" class="newfav desktop-only">Browse</a>
+            <a href="#" id="nav3" class="newfav mobile-only">Browse</a>
+        </nav>
+        
+    </header>
+    <aside id="search">
+
+    </aside>
+
+    <main id="$main">
+        <section>
+            <div class="initial-whiteout" id="initial-whiteout">
+                <div class="newAPODs-banner">
+                    <h2>
+                        Newly favourited APODs will appear here.
+                    </h2>
+                    <div class="CTA" id="CTA">
+                            <button type="submit"><img src="/imgs/heart.svg" alt="A heart icon.">Add your first favourite
+                            </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid-container" id="favs">
+                <div class="grid-row" id="grid">
+                </div>
+            </div>
+        </section>
+        <section class="daily-browser" id="daily-browser">
+            <header class="daily-browser-info">
+                <h2 id="DBrow-header"></h2>
+                <p id="DBrow-expl"></p>
+            </header>
+            <a href="#" class="daily-browser-back" id="back-aday">
+                <img src="/imgs/back.svg" alt="A back arrow shaped as a chevron">
+                <p>Prev</p>
+            </a>
+            <a  href="#" class="daily-browser-forward" id="forward-aday">
+                <img src="/imgs/forward.svg" alt="A forward arrow shaped as a chevron">
+                <p>Next</p>
+            </a>
+            <a id="DBrow-image"  class="DBrow-image" href="#"><img src="#" alt="See description text. Click to enlarge."></a>
+            <div class="fav-button" id="favbutton">
+
+            </div>
+        </section>
+        <section id="info" class="overlay">
+            <a href="#" class="back-x">
+                <img src="/imgs/X-close.svg" alt="A close icon in the shape of an X.">
+            </a>
+            <div class="info">
+                <div class="content">
+                    <h2 id="infoHeader">
+                         
+                    </h2>
+                    <p id="infoExpl">
+                       
+                    </p>
+                </div>
+                <a href="#" id="infoImg" class="DBrow-image">
+                    
+                </a>
+            </div>
+            
+            <div  class="fav-button" id="favbuttonInfo">
+                
+            </div>
+        </section>
+        <section id="full" class="full overlay">
+            <a href="#" class="back-x">
+                <img src="/imgs/X-close.svg" alt="An X icon.">
+            </a>
+            <div class="fav-button" id="favButtonFull">
+                
+            </div>
+            <div id="full-img">
+                
+            </div>
+            
+
+        </section>     
+    </main>
+<footer>
+    <p>
+        &copy; 2022 - Kevin Delahunt
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

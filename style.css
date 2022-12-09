@@ -1,0 +1,1009 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        General
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #484461;
+   
+}
+
+.back-x {
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+p {
+    line-height: 30px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a:hover {
+    color: #484461;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Header attempt 2
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+h1 {
+    font-size: 40px;
+    margin: 16px;
+}
+
+.header-two {
+    display:flex;
+    align-items: baseline;
+    gap: 100px;
+    height: 80px;
+    
+    color: #F5F5F5;
+    background-color: #141414;
+
+}
+
+.header-two nav {
+    display:flex;
+    gap: 20px;
+}
+
+.header-two nav a {
+    padding: 8px;
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+.header-two nav a:hover {
+    color:#484461;
+}
+
+.header-two nav .active {
+    border-bottom: 6px solid #484461;
+}
+
+.header-two nav .active:hover {
+    color: #F5F5F5;
+}
+
+.mobile-only {
+    display:none;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        padding: 0;
+        margin: 16px 4px;
+    }
+
+    .header-two {
+        display:flex;
+        flex-direction: column;
+        gap: 0;    
+        height: unset;
+    }
+    
+    .header-two .desktop-only {
+        display:none;
+    }
+
+
+    .header-two nav {
+        width: 100%;
+        margin: 0;
+        gap: 0;
+    }
+    .header-two nav a {
+        display: block;
+        padding: 24px 0;
+        color: #000;
+        text-decoration: none;
+        font-size: 30px;
+        background-color: #F5F5F5;
+        width: 100%;
+        text-align: center;
+    }
+    .header-two nav .active {
+        color: #F5F5F5;
+        background-color: #312D3B;
+        border-bottom: unset;
+    }
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Initial whiteout
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+.initial-state {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+main {
+    position: relative;
+    height: 100%;
+}
+
+.initial-whiteout {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        New APODs banner
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.newAPODs-banner {
+    background-color:#312D3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color:#F5F5F5;
+    margin: 16px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        GRID
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Modified code from: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+
+.grid-container {
+    margin: 16px;
+    background-color: #141414;
+}
+.grid-row {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create six equal columns that sits next to each other */
+  .grid-col {
+    flex: 15%;
+    /* max-width: 25%; */
+    padding: 0 4px;
+  }
+  
+  .grid-col img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .singleImg {
+    max-height: 80vh;
+  }
+
+  /* Responsive layout - makes a four column-layout instead of six columns */
+  @media screen and (max-width: 1550px) {
+    .grid-col {
+      flex: 20%;
+      /* max-width: 40%; */
+    }
+  }
+
+   /* Responsive layout - makes a three column-layout instead of six columns */
+   @media screen and (max-width: 800px) {
+    .grid-col {
+      flex: 30%;
+      /* max-width: 40%; */
+    }
+  }
+  
+  /* Responsive layout - makes the one columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .grid-col {
+      flex: 100%;
+      /* max-width: 100%; */
+    }
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Search 
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+aside {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #616161;
+    color: #F5F5F5;
+    margin: 16px 0;
+}
+/* Keep the h2 on the left */
+aside h2{
+    margin-right: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+input {
+    background-color: #141414;
+    color: #F5F5F5;
+    height: 48px;
+    color-scheme: dark;
+    padding: 0px 56px;
+    border: none;
+    text-transform: uppercase;
+}
+
+aside form button {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    color:#141414;
+    padding:8px 72px;
+    text-align: center;
+    height: 48px;
+    align-items: center;
+    font-size: 20px;
+    border: none;
+}
+
+
+aside form button:hover {
+    background-color: #484461;
+    color:#F5F5F5;
+}
+
+
+
+aside form button img {
+    margin-right: 8px;
+    /* helps to center the button content in the button. */
+    margin-left: -12px;
+}
+
+@media screen and (max-width: 1440px) {
+   aside {
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   form {
+    gap: 8px;
+    width: 100%;
+    margin-top: 16px;
+   }
+   input {
+    flex: 50%;
+    margin-right: 16px;
+   }
+   aside form button {
+    flex: 50%;
+    margin-left: 16px;
+    padding: 0;
+   }
+  }
+  @media screen and (max-width: 800px) {
+    
+    aside {
+        margin: 0;
+        padding: 8px;
+    }
+    
+    aside h2 {
+        font-size: 25px;
+    }
+
+    aside label {
+        font-size: 20px;
+
+    }
+    
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    input {
+        flex: unset;
+        margin-right: 0;
+        text-align:center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    aside form button {
+        flex: unset;
+        margin-left: 0;
+        width: 100%;
+    }
+
+  }
+
+    /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Fav Button
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+.fav-button, .CTA {
+    padding: 16px;
+    box-sizing: border-box;
+    }
+    
+.fav-button button, .CTA button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    justify-content: center;
+    border: none;
+}
+
+.fav-button button:hover, .CTA button:hover{
+    background-color: #484461;
+    color:#F5F5F5;
+}
+
+.fav-button button img, .CTA button img {
+    padding-right: 16px;
+}
+
+  @media screen and (max-width: 800px) {
+
+    .fav-button button, .CTA button {
+        width: 100%;
+        display:flex;
+        
+    }
+}
+
+    /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        More link
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+.more-link, .less-link {
+    text-decoration: none;
+    color:#F5F5F5;
+    font-weight: 900;
+}
+
+    /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Daily APOD Browser
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.daily-browser {
+    background-color: #312D3B;
+    margin: 16px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily-browser-info {
+    text-align: left;
+    background-color: #141414;
+    color: #F5F5F5;
+    width: 50%;
+    position: absolute;
+    top: 64px;
+    z-index: 1;
+    align-self: flex-start;
+}
+
+
+
+.daily-browser-back, .daily-browser-forward {
+    background-color: #141414;
+    border: none;
+    position: absolute;
+    color: #F5F5F5;
+    text-decoration: none;
+    text-align: center;
+}
+
+.daily-browser-back:hover, .daily-browser-forward:hover {
+    background-color: #000;
+}
+
+.daily-browser-back img, .daily-browser-forward img {
+    padding: 16px;
+}
+
+.daily-browser-back {
+    top: 50%;
+    left:0;
+}
+
+.daily-browser-forward {
+    top: 50%;
+    right: 0;
+}
+
+.daily-browser-info h2, .daily-browser-info p {
+margin-left: 80px;
+}
+
+.daily-browser-info h2 {
+    padding: 16px 8px 8px;
+}
+
+.daily-browser-info p {
+    padding: 16px 8px;
+}
+
+.daily-browser a iframe {
+    width: 100vw;
+    height: 100vw;
+}
+
+.daily-browser a img, .daily-browser a iframe {
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.mobile-more {
+    display:none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .daily-browser {
+        margin: 0px;
+    }
+    .daily-browser-info {
+        position: unset;
+        width: 100%;
+    }
+    
+    .daily-browser-back img, .daily-browser-forward img  {
+        width: 38px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .daily-browser-info h2 {
+        margin-left: 0;
+        font-size: 18px;
+        line-height: 36px;
+        font-size: 30px;
+    }
+    .daily-browser-info p {
+        display: none;
+    }
+
+    .fav-button, .CTA {
+        padding: 8px;
+    }
+
+    .mobile-more {
+        display:inline;
+    }
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Random Viewer
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+.random-viewer h2 {
+    background-color: #141414;
+    color:#F5F5F5;
+    padding: 16px;
+}
+
+.randoms-container {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin: 8px;
+    position: relative;
+}
+
+.get-more {
+    grid-column-start: 1;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    background-color: #312D3B;
+    margin: 8px;
+}
+.get-more h3 {
+ font-size: 30px;
+ color:#F5F5F5;
+ padding: 8px 16px;
+}
+
+.get-more button {
+    font-size: 20px;
+    color: #141414;
+    margin: 0 16px;
+    height: 48px;
+    border: none;
+   }
+
+   .get-more button:hover{
+    background-color: #484461;
+    color:#F5F5F5;
+   }
+
+.random {
+    background-color: #312D3B;
+    margin: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rand-title {
+    background-color:#141414;
+    color: #F5F5F5;
+    width: 100%;
+}
+
+.rand-title h4 {
+    padding: 16px;
+    font-size: 24px;
+}
+
+/* To ensure that the image inside the button doesn't grow, I'm using a chevron to specify the next immediate child */
+.random a img {
+    /* max-height: 100%; */
+    max-width: 100%;
+    max-height: 400px;
+    /* This overrides the default align-self value: stretch */
+    align-self: center;
+}
+
+.random1 {
+    
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.random2 {
+    
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.random3 {
+    
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.random4 {
+    
+    grid-row-start: 2;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    
+}
+
+.random .rand-title .fav-button, .random .rand-title .mobile, .randoms-container .daily-browser-back, .randoms-container .daily-browser-forward, .random-viewer .mobile-only {
+    display:none;
+}
+
+
+@media screen and (max-width: 1450px) {
+    
+    .randoms-container{
+        display:block;
+    }
+    .random, .get-more {
+        flex-direction: row;
+    }
+
+    .get-more {
+        align-items: center;
+        margin: 16px 8px;
+        gap:0px;
+    }
+
+    .get-more h3 {
+        width: 50%;
+    }
+
+    .get-more button {
+        margin: 16px;
+        height: 48px;
+        width: 50%;
+    }
+    
+    .random > .fav-button, .random .rand-title .desktop {
+        display:none;
+    }
+    .random .rand-title .fav-button, .random .rand-title .mobile {
+        display:block;
+    }
+
+    .random {
+        height: 100%;
+    }
+    .rand-title {
+        width: 50%;
+        height: 252px;
+        display:flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .random a {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .random a img {
+        max-height: 252px;
+    }
+    .fav-button button, .CTA button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .randoms-container .daily-browser-back, .randoms-container .daily-browser-forward {
+        display:block;
+    }
+
+    /* .randoms-container .random2, .randoms-container .random3, .randoms-container .random4 {
+        display: none;
+    } */
+
+    .randoms-container {
+        margin: 0;
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .random-viewer h2 {
+        font-size: 20px;
+    }
+
+    .random-viewer .mobile-only { 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 16px 8px;
+        margin: 0;
+    }
+
+    .randoms-container .desktop-only {
+        display: none; 
+    }
+
+    
+    .get-more h3 {
+        padding: 8px 0;
+        font-size: 18px;
+    }
+
+    .get-more button {
+        width: 100%; 
+        margin:0;
+        font-size: 18px;
+    }
+
+    .random {
+        margin:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90vh;
+
+    }
+
+    .random .rand-title .fav-button {
+        display: none;
+    }
+
+    .random > .fav-button {
+        display: block;
+    }
+
+    .fav-button, .CTA button {
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    .random h4 {
+        font-size: 16px;
+    }
+
+    .rand-title {
+        width: 100%;
+        height: unset;
+    }
+
+    .random a {
+        max-width: 100%;
+    }
+    .random a img {
+        width: 100vw;
+        max-height: unset;
+        max-width: unset;
+    }
+ 
+}
+
+  /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Info-Overlay
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.body-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overlay {
+    color:#F5F5F5;
+    background-color: #141414;
+    padding: 64px 80px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.overlay > a {
+    align-self: flex-start;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.info .content {
+    width: 50%;
+}
+
+.info .content h2 {
+    padding-bottom: 32px;
+}
+
+.info a {
+    display: flex;
+    padding-left: 16px;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.info a img {  
+    max-height: 50vh;
+    max-width: 50vw;
+}
+
+@media screen and (max-width: 1650px) {
+    .info {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+    }
+    
+    .info .content {
+        width: 100%;
+    }
+    .info .content p {
+        column-count: 2;
+        column-gap: 48px;
+    }
+
+    .info a img {  
+      
+      margin: 16px auto;
+      max-width: 100%;
+      max-height: 33vh;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .overlay {
+        padding: 16px 8px;
+        
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+
+    .overlay > a img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 32px;;
+    } 
+   
+    .info a {
+        padding: 0;
+    }
+
+    .info .content p {
+        column-count: 1;
+    }
+
+}
+
+  /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Full Screen 
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.full {
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+height: 100%;
+padding: 64px 80px;
+justify-content: space-between;
+}
+
+.full a {
+    padding: 16px 16px 16px 8px;
+}
+
+.full .fav-button {
+    padding: 16px 0 16px 0;
+}
+
+.full > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.full-img {
+    display: flex;
+    justify-content: center;
+}
+
+#full-img img{
+    width: 100%;
+}
+.full-img {
+    display: flex;
+    justify-content: center;
+}
+
+#full-img {
+    display: flex;
+    justify-content: center;
+    flex: 5 2 auto;
+}
+#full-img img {
+    width: 100%;
+    margin-left: 30px;
+} 
+
+@media screen and (max-width: 800px) {
+   
+    .full {
+    padding: 8px;
+    }
+    
+    #full-img img{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+  /*~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+        Footer
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    background-color: #141414;
+    color:#F5F5F5;
+    padding: 24px;
+}
+
+footer p {
+    text-align: center;
+}
